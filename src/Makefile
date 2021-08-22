@@ -202,7 +202,7 @@ CONFIG_CUSTOMER_HUAWEI_GENERAL = n
 
 CONFIG_DRVEXT_MODULE = n
 
-export TopDIR ?= $(srctree)/$(src)
+export TopDIR ?= $(src)
 
 ########### COMMON  #################################
 ifeq ($(CONFIG_GSPI_HCI), y)
@@ -2333,31 +2333,31 @@ endif
 ifneq ($(KERNELRELEASE),)
 
 ########### this part for *.mk ############################
-include $(srctree)/$(src)/hal/phydm/phydm.mk
+include $(src)/hal/phydm/phydm.mk
 
 ########### HAL_RTL8822B #################################
 ifeq ($(CONFIG_RTL8822B), y)
-include $(srctree)/$(src)/rtl8822b.mk
+include $(src)/rtl8822b.mk
 endif
 
 ########### HAL_RTL8821C #################################
 ifeq ($(CONFIG_RTL8821C), y)
-include $(srctree)/$(src)/rtl8821c.mk
+include $(src)/rtl8821c.mk
 endif
 
 ########### HAL_RTL8822C #################################
 ifeq ($(CONFIG_RTL8822C), y)
-include $(srctree)/$(src)/rtl8822c.mk
+include $(src)/rtl8822c.mk
 endif
 
 ########### HAL_RTL8814B #################################
 ifeq ($(CONFIG_RTL8814B), y)
-include $(srctree)/$(src)/rtl8814b.mk
+include $(src)/rtl8814b.mk
 endif
 
 ########### HAL_RTL8723F #################################
 ifeq ($(CONFIG_RTL8723F), y)
-include $(srctree)/$(src)/rtl8723f.mk
+include $(src)/rtl8723f.mk
 endif
 
 rtk_core :=	core/rtw_cmd.o \
